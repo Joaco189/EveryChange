@@ -4,12 +4,45 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
     <title>EveryChange</title>
 </head>
 <body>
+    <header>
+        <nav class="navbar">
+            <h1>EveryChange</h1>
+        </nav>
+    </header>
     <main>
-        
+        <section class="section-exchange">
+            <div>
+                <form action="" >
+                        <div class="exchange">
+                            <label class="label-input" for="input">Importe</label>
+                            <input type="text" name="input" id="input">
+                            <label id="label-input-money" for="input-money">De</label>
+                            <select id="input-money" name="input-money">
+                                <option value="arg" selected>ARG - Peso Argentino</option>
+                                <option value="usd">USD - Dolar Oficial</option>
+                                <option value="usdb">USDB - Dolar Blue</option>
+                                <option value="eur">EUR - Euro</option>
+                            </select>
+                            <button id="button-change">-></button>
+                            <label class="label-output-money" for="output-money">A</label>
+                            <select id="output-money" name="output-money">
+                                <option value="arg">ARG - Peso Argentino</option>
+                                <option value="usd" selected>USD - Dolar Oficial</option>
+                                <option value="usdb">USDB - Dolar Blue</option>
+                                <option value="eur">EUR - Euro</option>
+                            </select>
+                        </div>
+                        <div class="container-submit">
+                            <input type="submit" value="Convertir">
+                        </div>
+                </form>
+            </div>
+        </section>
     </main>
     <script src="js/main.js"></script>
 </body>
