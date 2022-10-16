@@ -16,26 +16,29 @@
     </header>
     <main>
         <section class="section-exchange">
-            <div>
-                <form action="" >
+            <div class="container-exchange">
+                <form action="" id="form-exchange">
                         <div class="exchange">
                             <label class="label-input" for="input">Importe</label>
                             <input type="text" name="input" id="input">
                             <label id="label-input-money" for="input-money">De</label>
                             <select id="input-money" name="input-money">
-                                <option value="arg" selected>ARG - Peso Argentino</option>
-                                <option value="usd">USD - Dolar Oficial</option>
-                                <option value="usdb">USDB - Dolar Blue</option>
-                                <option value="eur">EUR - Euro</option>
+                                <option value="btc" selected>BTC - Bitcoin</option>
+                                <option value="eth">ETH - Etherium</option>
+                                <option value="dai">DAI - Dai</option>
+                                <option value="usdc">USDC - Usdc</option>
                             </select>
                             <button id="button-change">-></button>
                             <label class="label-output-money" for="output-money">A</label>
                             <select id="output-money" name="output-money">
-                                <option value="arg">ARG - Peso Argentino</option>
-                                <option value="usd" selected>USD - Dolar Oficial</option>
-                                <option value="usdb">USDB - Dolar Blue</option>
-                                <option value="eur">EUR - Euro</option>
+                                <option value="ars" selected>ARG - Peso Argentino</option>
+                                <option value="usd">USD - Dolar Oficial</option>
+                                <option value="mxn">MXN - Pesos Mexicanos</option>
+                                <option value="pen">PEN - Pesos Peruanos</option>
                             </select>
+                        </div>
+                        <div id="result">
+                            
                         </div>
                         <div class="container-submit">
                             <input type="submit" value="Convertir">
