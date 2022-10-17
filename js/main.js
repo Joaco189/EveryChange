@@ -77,7 +77,17 @@ formExchange.addEventListener("submit", async (e) => {
     e.preventDefault();
     const input = document.getElementById("input").value;
     if (isNaN(input) || input === 0 || input === ""){
-        alert("Tenes que introducir un numero")
+        Toastify({
+            text: "Tenes que introducir un numero!",
+            duration: 2000,
+            gravity: "bottom", 
+            position: "right", 
+            stopOnFocus: true,
+            className: "font",
+            style: {
+                background: "linear-gradient(90deg, rgba(135,65,100,1) 0%, rgba(255,91,91,1) 100%)",
+            },
+        }).showToast();
     } else{
         const inputMoney = checkInputMoney();
         const outputMoney = checkOutputMoney();
