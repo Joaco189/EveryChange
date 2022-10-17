@@ -1,40 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+body{
+    background-image: url(../images/background.svg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
 .navbar{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 2.5rem;
     display: flex;
     width: 100vw;
     height: 4rem;
-    background-color: #e3f2fd;
+    background-color: #ffffff1f;
     justify-content: center;
     align-items: center;
     position: absolute;
 }
 
 .section-exchange{
-    height: 80vh;
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .container-exchange{
-    border: 2px solid black;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    background-color: #fff;
     border-radius: 15px;
     padding: 1rem;
+    position: relative;
+    top: -10rem;
 }
 
 .exchange{
-    /* background: black; */
     display: grid; 
     align-items: center;
     grid-auto-columns: 1fr; 
     grid-auto-rows: 1fr; 
     grid-template-columns: 2fr 1.5fr 0.5fr 1.5fr; 
-    grid-template-rows: 2.5em 4.5em; 
-    gap: 1em 1em; 
+    grid-template-rows: 2.5em 3.5em; 
+    gap: 0em 1em; 
     grid-template-areas: 
         "label-input label-input-money . label-output-money"
-        "input input-money button-change output-money"; 
+        "input input-money arrow output-money"; 
     width: 100%; 
-    height: 10em; 
+    height: 6em; 
 }
 
 .label-input { 
@@ -42,7 +57,13 @@
 }
 
 #input {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
     grid-area: input; 
+    height: 2rem;
+    border-radius: 15px;
+    border: 1px #001220 solid;
+    padding-inline: 0.5rem;
 }
 
 .label-input-money {
@@ -50,11 +71,24 @@
 }
 
 #input-money {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
     grid-area: input-money;
+    height: 2.2rem;
+    border-radius: 15px;
 }
 
-#button-change {
-    grid-area: button-change;
+.arrow {
+    grid-area: arrow;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.arrow img {
+    height: 100%;
 }
 
 .label-output-money {
@@ -62,11 +96,45 @@
 }
 
 #output-money {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
     grid-area: output-money;
+    height: 2.2rem;
+    border-radius: 15px;
 }
 
 .container-submit{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.btn{
+    margin-top: 0.5rem;
+    border-radius: 15px;
+    border: none;
+    background-color: #2a628f;
+    color: #001220;
+    height: 2rem;
+    width: 6rem;
+}
+
+.result{
+    height: 8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.result-number{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3rem;
+    margin-top: 2rem;
+}
+
+.result-date{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8rem;
+    margin-top: 1rem;
+    color: #7e7e7e;
 }
