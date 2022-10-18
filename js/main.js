@@ -30,7 +30,7 @@ const checkOutputMoney = () =>{
     return outputMoneySelected;
 }
 
-const fetching = async (inputMoney, outputMoney) => {
+const fetchingCurrency = async (inputMoney, outputMoney) => {
     const response = await fetch(`https://criptoya.com/api/satoshitango/${inputMoney}/${outputMoney}`)
     const data = await response.json();
     const result = data.ask
@@ -91,9 +91,32 @@ formExchange.addEventListener("submit", async (e) => {
     } else{
         const inputMoney = checkInputMoney();
         const outputMoney = checkOutputMoney();
-        const result = await fetching(inputMoney, outputMoney)
+        const result = await fetchingCurrency(inputMoney, outputMoney)
         showResult(input, result)
 
     }
     
 })
+
+// parte usd
+
+const fetchingUsd = async () => {
+    const response = await fetch(`https://criptoya.com/api/dolar`)
+    const data = await response.json()
+    console.log(data)
+    const {oficial, solidario, ccl, ccb, mep, time} = data
+    const arrayUsd = [oficial, solidario, ccl, ccb, mep, time]
+    console.log(arrayUsd)
+    return arrayUsd
+}
+
+const showUsdSection = async () => {
+    const usdContainer = document.getElementById("container-usd");
+    const arrayUsd = fetchingUsd()
+    await arrayUsd.forEach( (usd) => {
+        const div = document.createElement("div");
+        div.innerHTML = `
+                        <p>${usd}</p>
+                        `
+    })
+}
