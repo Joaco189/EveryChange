@@ -1,65 +1,93 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css">
-    <title>EveryChange</title>
-</head>
-<body>
-    <header>
-        <nav class="navbar">
-            <h1>EveryChange</h1>
-        </nav>
-    </header>
-    <main>
-        <section class="section-exchange">
-            <div class="container-exchange">
-                <form action="" id="form-exchange">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+        />
+        <link rel="stylesheet" href="css/reset.css" />
+        <link rel="stylesheet" href="css/style.css" />
+        <title>EveryChange</title>
+    </head>
+    <body>
+        <header>
+            <nav class="navbar">
+                <h1>EveryChange</h1>
+            </nav>
+        </header>
+        <main>
+            <section class="section-exchange">
+                <div class="container-exchange">
+                    <form action="" id="form-exchange">
                         <div class="exchange">
-                            <label class="label-input" for="input">Importe</label>
-                            <input type="text" name="input" id="input" placeholder="0.5">
-                            <label id="label-input-money" for="input-money">De</label>
+                            <label class="label-input" for="input"
+                                >Importe</label
+                            >
+                            <input
+                                type="text"
+                                name="input"
+                                id="input"
+                                placeholder="0.5"
+                            />
+                            <label id="label-input-money" for="input-money"
+                                >De</label
+                            >
                             <select id="input-money" name="input-money">
-                                <option value="btc" selected>BTC - Bitcoin</option>
+                                <option value="btc" selected>
+                                    BTC - Bitcoin
+                                </option>
                                 <option value="eth">ETH - Etherium</option>
                                 <option value="dai">DAI - Dai</option>
                                 <option value="usdc">USDC - Usdc</option>
                             </select>
                             <div class="arrow">
-                                <img src="images/flecha-correcta.png" alt="">
+                                <img src="images/flecha-correcta.png" alt="" />
                             </div>
-                            <label class="label-output-money" for="output-money">A</label>
+                            <label class="label-output-money" for="output-money"
+                                >A</label
+                            >
                             <select id="output-money" name="output-money">
-                                <option value="ars" selected>ARG - Peso Argentino</option>
+                                <option value="ars" selected>
+                                    ARG - Peso Argentino
+                                </option>
                                 <option value="usd">USD - Dolar Oficial</option>
-                                <option value="mxn">MXN - Pesos Mexicanos</option>
-                                <option value="pen">PEN - Pesos Peruanos</option>
+                                <option value="mxn">
+                                    MXN - Pesos Mexicanos
+                                </option>
+                                <option value="pen">
+                                    PEN - Pesos Peruanos
+                                </option>
                             </select>
                         </div>
                         <div class="container-submit">
-                            <input class="btn" type="submit" value="Convertir">
+                            <input
+                                class="btn"
+                                type="submit"
+                                value="Convertir"
+                            />
                         </div>
-                        <div id="result">
-                            
-                        </div>
-                </form>
-            </div>
-        </section>
-        <section class="section-usd">
-            <div id="container-usd">
-                <div class="container-usd-title">
-                    <h2>Tipo</h2>
-                    <p>Compra</p>
+                        <div id="result"></div>
+                    </form>
                 </div>
-            </div>
-        </section>
-    </main>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
-    <script src="js/main.js"></script>
-    <noscript>Necesitas JavaScript para usar esta aplicacion</noscript>
-</body>
+            </section>
+            <section class="section-usd">
+                <div id="container-usd">
+                    <div class="container-usd-title">
+                        <h2>Tipo</h2>
+                        <p>Compra</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <script
+            type="text/javascript"
+            src="https://cdn.jsdelivr.net/npm/toastify-js"
+        ></script>
+        <script src="js/main.js"></script>
+        <noscript>Necesitas JavaScript para usar esta aplicacion</noscript>
+    </body>
 </html>
