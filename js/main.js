@@ -103,20 +103,55 @@ formExchange.addEventListener("submit", async (e) => {
 const fetchingUsd = async () => {
     const response = await fetch(`https://criptoya.com/api/dolar`)
     const data = await response.json()
-    console.log(data)
-    const {oficial, solidario, ccl, ccb, mep, time} = data
-    const arrayUsd = [oficial, solidario, ccl, ccb, mep, time]
-    console.log(arrayUsd)
-    return arrayUsd
+    return data
 }
 
 const showUsdSection = async () => {
     const usdContainer = document.getElementById("container-usd");
-    const arrayUsd = fetchingUsd()
-    await arrayUsd.forEach( (usd) => {
-        const div = document.createElement("div");
-        div.innerHTML = `
-                        <p>${usd}</p>
-                        `
-    })
+    const objectUsd = await fetchingUsd() 
+    const usdDate = new Date(objectUsd.time*1000).toLocaleString();
+    console.log(usdDate)
+    const div = document.createElement("div");
+    div.style = "margin-top: 0.5rem;"
+    div.nth
+    div.innerHTML = `
+                        <div class="container-usd-type">
+                            <p>Dolar Oficial</p>
+                            <span>${objectUsd.oficial.toLocaleString("es",{
+                                style: "currency",
+                                currency: `ARS`
+                            })}</span>
+                        </div>
+                        <div class="container-usd-type">
+                            <p>Dolar Blue</p>
+                            <span>${objectUsd.blue.toLocaleString("es",{
+                                style: "currency",
+                                currency: `ARS`
+                            })}</span>
+                        </div>
+                        <div class="container-usd-type">
+                            <p>Dolar CCB</p>
+                            <span>${objectUsd.ccb.toLocaleString("es",{
+                                style: "currency",
+                                currency: `ARS`
+                            })}</span>
+                        </div>
+                        <div class="container-usd-type last">
+                            <p>Dolar CCL</p>
+                            <span>${objectUsd.ccl.toLocaleString("es",{
+                                style: "currency",
+                                currency: `ARS`
+                            })}</span>
+                        </div>
+                        <div class="usdDate">
+                            <p>Ultima actualización: ${usdDate}</p>
+                        </div>
+                    `
+    usdContainer.append(div);
+    setInterval(() => {
+        usdContainer.removeChild(div)
+        showUsdSection()
+    },  30000); 
 }
+
+showUsdSection()
